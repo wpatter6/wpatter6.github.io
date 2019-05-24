@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: rgb(32, 31, 30);
+        padding: 0;
+        margin: 0;
+      }
+      iframe {
+        border: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const sub = urlParams.get("sub") || "ProgrammerHumor";
+      const height = urlParams.get("height") || "330";
+      const width = urlParams.get("width") || "654";
+      const theme = urlParams.get("theme") || "dark";
+      const mode = urlParams.get("mode") || "grid";
+      const embed = document.createElement("script");
+      embed.setAttribute("data-subreddit", sub);
+      embed.setAttribute("src", "https://redditjs.com/subreddit.js");
+      embed.setAttribute("data-height", height);
+      embed.setAttribute("data-width", width);
+      embed.setAttribute("data-theme", theme);
+      embed.setAttribute("data-subreddit-mode", mode);
+      document.body.appendChild(embed);
+    </script>
+  </body>
+</html>
